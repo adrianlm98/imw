@@ -10,15 +10,15 @@ Ahora vamos a crear un virtual host. Para ello accedemos a **/etc/nginx/sites-av
 
 Donde pondremos el nombre del servidor (server_name) y la ruta donde esta ubicado (location).
 
-    series.alu5971.me (_series_ seria un subdominio hay un pequeño fallo en la captura, la sintaxis correcta seria alu5971.me)
+    series.alu5971.me (series seria un subdominio hay un pequeño fallo en la captura, la sintaxis correcta seria alu5971.me)
 
 ![img](./img/2.png)
 
 #### Creación de enlaces simbólicos.
 
-Nginx tiene un sistema para poder experimentar con nuestro servidor sin poner en riesgo nuestro trabajo, separa en dos carpetas los archivos de configuración sites-available y sites-enabled (available serían los que no se pueden ver desde el exterior y enabled los que están permitidos), por ello necesitamos crear unos enlaces simbólicos de los archivos para no tener que estar copiando entre carpetas.
+Nginx tiene un sistema para poder experimentar con nuestro servidor sin poner en riesgo nuestro trabajo, separa en dos carpetas los archivos de configuración *sites-available* y *sites-enabled* (*available* serían los que no se pueden ver desde el exterior y *enabled* los que están permitidos), por ello necesitamos crear unos enlaces simbólicos de los archivos para no tener que estar copiando entre carpetas.
 
-    La captura tiene otro nombre _shared_ porque es de una práctica reciente pero solo tendríamos que cambiar el nombre por _series_.
+    La captura tiene otro nombre shared porque es de una práctica reciente pero solo tendríamos que cambiar el nombre por series.
 
 ![img](./img/5.png)
 
@@ -38,7 +38,7 @@ Por último solo tendríamos que crear nuestra página web.
 
 Añadiendo fotos,links...
 
-    La crearíamos como un index.html dentro de nuestra carpeta en **/home/alu5971/webapps/series/index.html** y las imágenes en una carpeta con el nombre img por ejemplo.
+    La crearíamos como un index.html dentro de nuestra carpeta en /home/alu5971/webapps/series/index.html y las imágenes en una carpeta con el nombre img por ejemplo.
 
 ![img](./img/html1.png)
 
@@ -50,6 +50,6 @@ Añadiendo fotos,links...
 
 ### Resultado Final.
 
-alu5971.me/series
+[Ejemplo de página web](alu5971.me/series)
 
 ![img](./img/resultadofinal.png)
