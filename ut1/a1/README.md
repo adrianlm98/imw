@@ -66,7 +66,7 @@ Añadiendo fotos,links...
 ### Resultado Final.
 
 
-[Ejemplo de página web](alu5971.me/series)
+alu5971.me/series
 
 
 ![img](./img/resultadofinal.png)
