@@ -8,6 +8,10 @@
 
     sudo systemctl status nginx
 
+#### Para reiniciar nuestro servidor web:
+
+    sudo systemctl reload nginx
+
 Ahora vamos a crear un virtual host. Para ello accedemos a **/etc/nginx/sites-available/** y creamos un fichero llamado _**series**_.
 
 
