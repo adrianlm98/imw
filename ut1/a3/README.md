@@ -6,7 +6,7 @@ http://imw.alu5971.me y http://imw.alu5971.me/mec/
 
 Primero creamos un virtual hosts en sites-available donde indicamos el subdominio imw y dentro del subdominio la carpeta mec. Indicamos la ruta donde se aloja el subdominio.
 
-![img](../img/sitioweb1/sites-available-imw.png)
+![img](./img/sitioweb1/sites-available-imw.png)
 
 Enlazamos el archivo que está en sites-available con el de sites-enabled con un enlace simbolico.
 
