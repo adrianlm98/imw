@@ -14,7 +14,7 @@ Enlazamos el archivo que está en sites-available con el de sites-enabled con un
 
 Ahora creamos los html que se van a ejecutar en cada pagina (index.html).
 
-Imagen:
+##### *Imagen:*
 
 Simplemente hacemos un img src y escribimos la ruta donde tengamos el archivo.
 
@@ -28,7 +28,7 @@ Y movemos hacia la carpeta que hemos creado previamente (la que nosotros queramo
 
 ![img](./img/sitioweb1/mvimagen.png)
 
-PDF:
+##### *PDF:*
 
 Repetimos el proceso creamos un index.html donde pondremos la ruta donde se encuentra el pdf que queremos mostrar(boe.pdf) con el a href="ruta".
 
@@ -46,15 +46,15 @@ Una vez terminado reiniciamos el servicio nginx.
 
 ![img](./img/sitioweb1/reiniciar-servicio.png)
 
-#### Resultado final:
+### Resultado final:
 
-Imagen :
+##### *Imagen :*
 
 http://imw.alu5971.me
 
 ![img](./img/sitioweb1/resultadoimw-img.png)
 
-PDF :
+##### *PDF :*
 
 http://imw.alu5971.me/mec/
 
@@ -112,13 +112,13 @@ Reiniciamos el servicio nginx.
 
 ![img](./img/sitioweb3/systemctl-students.png)
 
-#### Resultado final
+### Resultado final
 
-Login
+##### *Login*
 
 ![img](./img/sitioweb3/prueba1.png)
 
-html
+##### *html*
 
 ![img](./img/sitioweb3/prueba2.png)
 
@@ -129,13 +129,13 @@ http://redirect.alu5971.me
 
 Primero creamos los virtual host target y redirect en sites-available.
 
-*Target*
+##### *Target*
 
 Añadimos el nombre del subdominio target.alu5971.me, la carpeta donde se va alojar y la dirección de los logs(hay que crear la carpeta redirect en /var/log/nginx)
 
 ![img](./img/sitioweb4/target.png)
 
-*Redirect*
+##### *Redirect*
 
 Añadimos un virtual host que su subdominio será redirect.alu5971.me, escucha en el puerto 80, añadimos la carpeta donde se encuentra y le decimos que retorna hacia target.alu5971.me.
 
@@ -159,14 +159,14 @@ Creamos las carpetas necesarias con mkdir.
 
 Ahora para añadir la página web al directorio webapps/target necesitamos usar el comando scp
 
-   scp nombredelarchivo alu5971@alu5971.me:
+     scp nombredelarchivo alu5971@alu5971.me:
 
 Quedará en nuestro home.
 Después instalamos el unzip y lo descomprimimos.
 
 ![img](./img/sitioweb4/unzip.png)
 
-Y lo movemos al directorio deseado en este caso webapps.
+Y lo movemos al directorio deseado en este caso webapps/target.
 
 ![img](./img/sitioweb4/html.png)
 
