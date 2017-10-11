@@ -121,3 +121,65 @@ Login
 html
 
 ![img](./img/sitioweb3/prueba2.png)
+
+### Sitio web 4
+
+http://redirect.alu5971.me
+
+
+Primero creamos los virtual host target y redirect en sites-available.
+
+*Target*
+
+Añadimos el nombre del subdominio target.alu5971.me, la carpeta donde se va alojar y la dirección de los logs(hay que crear la carpeta redirect en /var/log/nginx)
+
+![img](./img/sitioweb4/target.png)
+
+*Redirect*
+
+Añadimos un virtual host que su subdominio será redirect.alu5971.me, escucha en el puerto 80, añadimos la carpeta donde se encuentra y le decimos que retorna hacia target.alu5971.me.
+
+Añadimos otro virtual host que su subdominio será www.redirect.alu5971.me que escucha en el puerto 80 y retorna hacia target.alu5971.me.
+
+![img](./img/sitioweb4/sites-available-redirect.png)
+
+Creamos las carpetas necesarias con mkdir.
+
+![img](./img/sitioweb4/mkdir-redirect.png)
+
+![img](./img/sitioweb4/mkdir-redirect-var.png)
+
+(una vez accedamos a las páginas se nos crearán los archivos .log)
+
+![img](./img/sitioweb4/log.png)
+
+![img](./img/sitioweb4/mkdir-target.png)
+
+
+
+Ahora para añadir la página web al directorio webapps/target necesitamos usar el comando scp
+
+   scp nombredelarchivo alu5971@alu5971.me:
+
+Quedará en nuestro home.
+Después instalamos el unzip y lo descomprimimos.
+
+![img](./img/sitioweb4/unzip.png)
+
+Y lo movemos al directorio deseado en este caso webapps.
+
+![img](./img/sitioweb4/html.png)
+
+Reiniciamos el servicio nginx.
+
+![img](./img/sitioweb4/restart.png)
+
+### Resultado final
+
+http://www.redirect.alu5971.me/hola/
+
+http://www.redirect.alu5971.me/probando/
+
+http://redirect.alu5971.me/test/
+
+![img](./img/sitioweb4/resultado.png)
