@@ -4,7 +4,43 @@
 
 * http://php.alu5971.me
 
-* Mostrar la aplicación demo_php
+Primero creamos un virtual host llamado php.
+
+![img](./img/sitio1/captura1.png)
+
+* Añadimos el nombre del servidor *php.alu5971.me*
+* Un index, en este caso index.php porque la página es en php.
+* Root : La dirección donde se ubica el index.php que vamos a mostrar.
+* Por ultimo añadimos un location para decirle a nginx donde tiene que buscar el programa que va a traducir el código php (php-fpm)
+
+Después creamos el enlace simbólico con **ln -s**
+
+![img](./img/sitio1/enlace_simbolico.png)
+
+![img](./img/sitio1/ls_enlace_simbolico.png)
+
+Subimos el archivo demo_php.zip a la máquina cloud.
+
+![img](./img/sitio1/subir_archivo.png)
+
+Una vez en la máquina cloud descomprimimos el archivo con unzip.
+
+![img](./img/sitio1/descomprimir_archivo.png)
+
+Y movemos la carpeta que hemos descomprimido hacia el directorio *webapps/php*.
+
+![img](./img/sitio1/mover_archivo.png)
+
+Por último recargamos el servicio nginx.
+
+![img](./img/sitio1/reload_nginx.png)
+
+### Resultado :
+
+![img](./img/sitio1/resultado.png)
+
+
+
 
 ## Sitio web 2
 
@@ -36,7 +72,7 @@ Para entrar en nuestro entorno virtual tenemos que hacer lo siguiente :
 
 ### uWSGI
 
-Instalamos flask y uwsgi dentro de nuestro entorno virtual (now) :
+Instalamos flask y uwsgi dentro de nuestro entorno virtual (now), serán los encargados de traducir el código python para que nginx pueda mostrarlo correctamente :
 
 ![img](./img/practica4.png)
 
@@ -91,3 +127,47 @@ Ahora activamos el run.sh:
     ./run.sh
 
 ![img](./img/practica15.png)
+
+#### Prueba:
+
+![img](./img/practica16.png)
+
+### Supervisor
+
+Utilizamos supervisor para poder controlar nuestro proceso **(Reiniciarlo, apagarlo, pararlo..)**.
+
+#### Configuración
+
+Añadimos un archivo de configuración para que supervisor pueda gestionar now.
+
+![img](./img/practica17.png)
+
+* Especificamos el programa que vamos a administrar.
+
+* Elegimos el usuario encargado de administrarlo.
+
+* Seleccionamos el archivo que tiene el script que vamos a ejecutar.
+
+* Activamos el autostart para que se active automáticamente.
+
+* Activamos el autorestart para que se reinice si hay algún problema.
+
+* Activamos el killasgroup para que mate a los grupos hijos.
+
+* Añadimos la ruta donde se van alojar los archivo de log (*now.err.log - now.out.log*)
+
+#### Comandos de comprobación :
+
+![img](./img/practica18.png)
+
+![img](./img/practica19.png)
+
+![img](./img/practica21.png)
+
+![img](./img/practica22.png)
+
+#### Modificaciones :
+
+![img](./img/modificacion1.png)
+
+![img](./img/modificacion2.png)
