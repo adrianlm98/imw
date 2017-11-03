@@ -14,7 +14,7 @@ resto = resto % 20
 
 
 if change_20 > 0:
-    print (change_50, "billetes de 20")
+    print (change_20, "billetes de 20")
 
 change_10 = resto // 10
 resto = resto % 10
