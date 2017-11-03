@@ -1,105 +1,46 @@
-
 import sys
-money = sys.argv[1]
+money = int(sys.argv[1])
 
 print (money)
 
-money_50 = money % 50
-money_50x = money // 50
+change_50 = money // 50
+resto = money % 50
 
-if money_50x > 0:
-    print (money_50x, "billete/s de 50")
-else:
-    print ("Ninguno de 50")
+if change_50 > 0:
+    print (change_50, "billetes de 50")
 
-money_20 = money_50 % 20
-money_20x = money_50 // 20
-
-if money_20x > 0:
-    print (money_20x, "billete/s de 20")
-else:
-    print ("Ninguno de 20")
-
-money_10 = money_20 % 10
-money_10x = money_20 // 10
-
-if money_10x > 0:
-    print (money_10x, "billete/s de 10")
-else:
-    print ("Ninguno de 10")
-
-money_5 = money_10 % 5
-money_5x = money_10 // 5
-
-if money_5x > 0:
-    print (money_5x, "billete/s de 5")
-else:
-    print ("Ninguno de 5")
-
-money_2 = money_5 % 2
-money_2x = money_5 // 2
-
-if money_2x > 0:
-    print (money_2x, "moneda/s de 2")
-else:
-    print ("Ninguno de 2")
-
-money_1 = money_2 % 1
-money_1x = money_2 // 1
-
-if money_1x > 0:
-    print (money_1x, "moneda/s de 1")
-else:
-    print ("Ninguno de 1")
+change_20 = resto // 20
+resto = resto % 20
 
 
-money_50 = money % 50
-money_50x = money // 50
+if change_20 > 0:
+    print (change_50, "billetes de 20")
 
-if money_50x > 0:
-    print (money_50x, "billete/s de 50")
-else:
-    print ("Ninguno de 50")
-
-money_20 = money_50 % 20
-money_20x = money_50 // 20
-
-if money_20x > 0:
-    print (money_20x, "billete/s de 20")
-else:
-    print ("Ninguno de 20")
-
-money_10 = money_20 % 10
-money_10x = money_20 // 10
-
-if money_10x > 0:
-    print (money_10x, "billete/s de 10")
-else:
-    print ("Ninguno de 10")
-
-money_5 = money_10 % 5
-money_5x = money_10 // 5
-
-if money_5x > 0:
-    print (money_5x, "billete/s de 5")
-else:
-    print ("Ninguno de 5")
-
-money_2 = money_5 % 2
-money_2x = money_5 // 2
-
-if money_2x > 0:
-    print (money_2x, "moneda/s de 2")
-else:
-    print ("Ninguno de 2")
-
-money_1 = money_2 % 1
-money_1x = money_2 // 1
-
-if money_1x > 0:
-    print (money_1x, "moneda/s de 1")
-else:
-    print ("Ninguno de 1")
+change_10 = resto // 10
+resto = resto % 10
 
 
+if change_10 > 0:
+    print (change_10, "billetes de 10")
+
+change_5 = resto // 5
+resto = resto % 5
+
+
+if change_5 > 0:
+    print (change_5, "billetes de 5")
+
+change_2 = resto // 2
+resto = resto % 2
+
+
+if change_2 > 0:
+    print (change_2, "monedas de 2")
+
+change_1 = resto // 1
+resto = resto % 1
+
+
+if change_1 > 0:
+    print (change_1, "monedas de 1")
 
