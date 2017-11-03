@@ -1,7 +1,7 @@
 import sys
 money = int(sys.argv[1])
 
-print (money)
+print ("El cambio de ",money, "es: ")
 
 change_50 = money // 50
 resto = money % 50
