@@ -35,13 +35,13 @@ resto = resto % 2
 
 
 if change_2 > 0:
-    print (change_2, "monedas de 2")
+    print (change_2, "moneda de 2")
 
 change_1 = resto // 1
 resto = resto % 1
 
 
 if change_1 > 0:
-    print (change_1, "monedas de 1")
+    print (change_1, "moneda de 1")
 
 
