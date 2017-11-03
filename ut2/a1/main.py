@@ -1,5 +1,6 @@
 
-money = int(input("Cantidad que desea cambiar: "))
+import sys
+money = sys.argv[1]
 
 print (money)
 
