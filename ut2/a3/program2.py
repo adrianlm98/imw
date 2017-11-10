@@ -5,7 +5,7 @@ if numero >= 0:
     sumando = 0
     for suma in range(1, numero + 1):
         cuadrado = suma ** 2
-        sumando += cuadrado
+        sumando += cuadrado     # sumando = cuadrado + sumando
     else:
         print(sumando)
 else:
