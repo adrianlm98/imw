@@ -4,7 +4,7 @@ if nota >= 0 and nota <= 10:
   if nota < 5:
     print("Suspenso")
   if nota >= 5 and nota < 7:
-    print("Aprobando")
+    print("Aprobado")
   if nota >= 7 and nota < 9:
     print("Notable")
   if nota >= 9 and nota < 10:
