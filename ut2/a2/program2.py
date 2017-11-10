@@ -14,7 +14,7 @@ d13 = math.sqrt((x1-x3)**2 + (y1-y3)**2)
 
 if d12 < d13:
 
-    print ("El punto más cercano a " "(",x1, "," ,y1,")" "es" "(",x3, "," ,y3, ")" " y está a una distancia de", d12)
+    print ("El punto más cercano a " "(",x1, "," ,y1,")" "es" "(",x2, "," ,y2, ")" " y está a una distancia de", d12)
     
 else:
     print ("El punto más cercano a " "(",x1,"," ,y1,")" " es " "(",x3, "," ,y3, ")" " y está a una distancia de", d13)
