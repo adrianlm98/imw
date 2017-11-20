@@ -1,10 +1,10 @@
 import sys
 
-num1 = list(sys.argv[1:])
-num2 = len(num1)
+numbers = sys.argv[1:]
+num2 = len(numbers)
 sumar = 0
 
-for i in num1:
+for i in numbers:
     i = float(i)
     sumar += i
 resultado = sumar / num2
