@@ -31,7 +31,7 @@ def num_words(text):
     words = "abcdefghijklmnñopqrstuvwxyz"
     add = 0
     for i in text:
-        if i in words:
+        if i.lower() in words:
             add += 1
     return add
 
