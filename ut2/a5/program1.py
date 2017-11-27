@@ -28,41 +28,58 @@ def num_digits(text):
 
 
 def num_words(text):
-    words = "abcdefghijklmnñopqrstuvwxyz"
-    add = 0
-    for i in text:
-        if i.lower() in words:
-            add += 1
-    return add
+    words = text.split()
+    count = len(words)
+    return count
 
 
 def reverse(text):
-    # ...
-    return
+    words = len(text)
+    size = ""
+    for i in range(1, words + 1):
+        size += (text[-i])
+    return size
 
 
 def length(text):
-    # ...
-    return
+    words = len(text)
+    return words
 
 
 def halfs(text):
-    # ...
-    return
+    words = len(text) / 2
+    half1 = text[:int(words)]
+    half2 = text[int(words):]
+    return half1 + " | " + half2
 
 
 def upper_vowels(text):
-    return
+    vowels = "aeiou"
+    upper = ""
+    for i in text:
+        if i in vowels:
+            upper += i.upper()
+        else:
+            upper += i
+    return upper
 
 
 def sorted_by_words(text):
-    # ...
-    return
+    words = text.split()
+    sort = sorted(words)
+    final = " ".join(sort)
+    return final
 
 
 def length_of_words(text):
-    # ...
-    return
+    words = text.split()
+    lista = list()
+    position = len(words)
+    for i in range(position):
+        valor = len(words[i])
+        lista.append(str(valor))
+    final = " ".join(lista)
+    return final
 
 
 text = sys.argv[1]
