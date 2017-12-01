@@ -1,7 +1,5 @@
 import sys
 
-sentence = sys.argv[1]
-
 def count_words(sentence):
     summary = {}
     listw = sentence.split(" ")
@@ -11,5 +9,9 @@ def count_words(sentence):
         else:
             summary[count] = 1
     return summary
-for names, numbers in (count_words(sentence)).items():
+
+sentence = sys.argv[1]
+bucle = count_words(sentence).items()
+
+for names, numbers in bucle:
     print(names + ":" + str(numbers))
