@@ -1,0 +1,16 @@
+body { padding-left:15px ; padding-top: 15px; text-align:left; font-family: Verdana;  }
+h1 { margin-bottom: 2px;}
+h2 { margin-top:2px ;margin-bottom: 5px ; color:#207680; font-size: 27px; }
+h5 { margin-bottom: 10px ; margin-right: 150px ;color: orange; }
+.center{ margin-right: 50px; color: #207680; }
+
+.table { padding-right: 75px ; padding-top:7.5px; padding-bottom: 7.5px; padding-left: 6px;}
+.bg {background-color: #E8E4E3;}
+#black { font-weight: bold;  }
+.space {padding-left: 30px; padding-top: 30px;}
+#process {padding-left: 20px;}
+#last-td {padding-left: 160px; padding-top: 15px; }
+#button {background-color: #207680; width: 85px; height: 30px; border-bottom: : 1; color: white;}
+.align {text-align: right; padding-right: 10px;}
+.color {background-color: #207680; color:white; padding-bottom: 14px; padding-left: 8px; padding-top: 14px;}
+.color2 {padding-bottom: 14px; padding-right: 190px; padding-left: 8px; padding-top: 14px;}
